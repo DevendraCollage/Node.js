@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "age": 30,
+      "is_active": true
+    },
+    {
+      "id": 2,
+      "username": "jane_smith",
+      "email": "jane.smith@example.com",
+      "age": 25,
+      "is_active": false
+    }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Product A",
+      "price": 19.99,
+      "stock_quantity": 50
+    },
+    {
+      "id": 102,
+      "name": "Product B",
+      "price": 29.99,
+      "stock_quantity": 30
+    }
+  ],
+  "orders": [
+    {
+      "order_id": 501,
+      "user_id": 1,
+      "products": [
+        {
+          "product_id": 101,
+          "quantity": 2
+        },
+        {
+          "product_id": 102,
+          "quantity": 1
+        }
+      ],
+      "total_price": 69.97,
+      "order_date": "2023-01-15"
+    },
+    {
+      "order_id": 502,
+      "user_id": 2,
+      "products": [
+        {
+          "product_id": 101,
+          "quantity": 1
+        }
+      ],
+      "total_price": 19.99,
+      "order_date": "2023-02-01"
+    }
+  ]
+}
