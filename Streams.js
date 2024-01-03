@@ -23,7 +23,7 @@ server.on("request", (req, res) => {
   //* Reading from a stream
   //* Create a readable stream
   //* Handle stream events -> data, end, and error
-  const rstream = fs.createReadStream("input.txt");
+  // const rstream = fs.createReadStream("input.txt");
   rstream.on("data", (chunk) => {
     console.log(`Received ${chunk.length} bytes`);
     res.write(chunk);
@@ -31,6 +31,11 @@ server.on("request", (req, res) => {
   rstream.on("end", () => {
     res.end();
   });
+
+  //? This is the third way to show the data using pipe method
+  //* Pipe method - readable data to print writeable data on the screen
+  const rstream = fs.createReadStream("input.txt");
+  rstream.pipe(res);
 });
 
 //? Add logic to start the server, such as:
