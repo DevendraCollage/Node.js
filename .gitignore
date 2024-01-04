@@ -6,3 +6,4 @@ NPM/node_modules
 /.pnp
 .pnp.js
 /.parcel-cache
+/Weater_App/node_modules
